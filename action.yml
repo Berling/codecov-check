@@ -8,7 +8,7 @@ inputs:
     description: "Code coverage threshold to reach"
     required: true
 runs:
-  using: docker
+  using: "docker"
   image: "Dockerfile"
   args:
     - ${{ inputs.token }}
