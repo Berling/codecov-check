@@ -11,5 +11,5 @@ runs:
   using: docker
   image: "Dockerfile"
   args:
-    - ${{ input.token }}
-    - ${{ input.threshold }}
+    - ${{ inputs.token }}
+    - ${{ inputs.threshold }}
