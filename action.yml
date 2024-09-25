@@ -1,0 +1,15 @@
+name: "Codecov Check"
+description: "Check total code coverage from codecov is above threshold"
+inputs:
+  token:
+    description: "Codecov API token"
+    required: true
+  threshold:
+    description: "Code coverage threshold to reach"
+    required: true
+runs:
+  using: docker
+  image: "Dockerfile"
+  args:
+    - ${{ input.token }}
+    - ${{ input.threshold }}
